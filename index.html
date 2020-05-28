@@ -24,18 +24,20 @@
     <thead>
       <tr>
         <th scope="col">Rank</th>
-        <th scope="col">NOC</th>
-        <th>Gold</th>
-        <th>Silver</th>
-        <th>Bronze</th>
-        <th>Total</th>
+        <th scope="col"><abbr title="Number of Countries">NOC</abbr></th>
+        <th scope="col" class="gold">Gold</th>
+        <th scope="col" class="silver">Silver</th>
+        <th scope="col" class="bronze">Bronze</th>
+        <th scope="col">Total</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th>1</th>
-        <th><img width="16" src="vendor/flag-icon-css-master/flags/1x1/us.svg" alt="flag of USA"> United States <abbr
-            title="United States"></abbr>(USA)</th>
+        <th>
+          <span class="flag-icon flag-icon-us" width="16"><a href="#"></a></span> United States<abbr
+            title="United States">USA</abbr>
+        </th>
         <td>46</td>
         <td>29</td>
         <td>29</td>
@@ -43,8 +45,7 @@
       </tr>
       <tr>
         <th>2</th>
-        <th><img width="16" src="vendor/flag-icon-css-master/flags/1x1/cn.svg" alt="flag of China"> China <abbr
-            title="China"></abbr>(CHN)</th>
+        <th><span class="flag-icon flag-icon-cn" width="16"></span> China <abbr title="China">CHN</abbr></th>
         <td>38</td>
         <td>27</td>
         <td>23</td>
@@ -52,8 +53,8 @@
       </tr>
       <tr>
         <th>3</th>
-        <th><img width="16" src="vendor/flag-icon-css-master/flags/1x1/gb.svg" alt="flag of Great Britain"> Great
-          Britain <abbr title="Great Britain"></abbr>(GBR)*</th>
+        <th><span class="flag-icon flag-icon-gb" width="16"></span> Great
+          Britain <abbr title="Great Britain">GBR*</abbr></th>
         <td>29</td>
         <td>17</td>
         <td>19</td>
@@ -61,8 +62,7 @@
       </tr>
       <tr>
         <th>4</th>
-        <th><img width="16" src="vendor/flag-icon-css-master/flags/1x1/ru.svg" alt="flag of Russia"> Russia <abbr
-            title="Russia"></abbr>RUS</th>
+        <th><span class="flag-icon flag-icon-ru" width="16"></span> Russia <abbr title="Russia">RUS</abbr></th>
         <td>24</td>
         <td>26</td>
         <td>32</td>
@@ -70,8 +70,8 @@
       </tr>
       <tr>
         <th>5</th>
-        <th><img width="16" src="vendor/flag-icon-css-master/flags/1x1/kr.svg" alt="flag of South Korea"> South Korea
-          <abbr title="South Korea"></abbr>(KOR)</th>
+        <th><span class="flag-icon flag-icon-kr" width="16"></span> South Korea
+          <abbr title="South Korea">KOR</abbr></th>
         <td>13</td>
         <td>8</td>
         <td>7</td>
@@ -79,8 +79,7 @@
       </tr>
       <tr>
         <th>6</th>
-        <th><img width="16" src="vendor/flag-icon-css-master/flags/1x1/de.svg" alt="flag of Germany"> Germany <abbr
-            title="Germany"></abbr>(GER)</th>
+        <th><span class="flag-icon flag-icon-de" width="16"></span> Germany <abbr title="Germany">GER</abbr></th>
         <td>11</td>
         <td>19</td>
         <td>14</td>
@@ -88,8 +87,7 @@
       </tr>
       <tr>
         <th>7</th>
-        <th><img width="16" src="vendor/flag-icon-css-master/flags/1x1/fr.svg" alt="flag of France"> France <abbr
-            title="France"></abbr>(FRA)</th>
+        <th><span class="flag-icon flag-icon-fr" width="16"></span> France <abbr title="France">FRA</abbr></th>
         <td>11</td>
         <td>11</td>
         <td>12</td>
@@ -97,8 +95,7 @@
       </tr>
       <tr>
         <th>8</th>
-        <th><img width="16" src="vendor/flag-icon-css-master/flags/1x1/it.svg" alt="flag of Italy"> Italy <abbr
-            title="Italy"></abbr>(ITA)</th>
+        <th><span class="flag-icon flag-icon-it" width="16"></span> Italy <abbr title="Italy">ITA</abbr></th>
         <td>8</td>
         <td>9</td>
         <td>11</td>
@@ -106,8 +103,7 @@
       </tr>
       <tr>
         <th>9</th>
-        <th><img width="16" src="vendor/flag-icon-css-master/flags/1x1/hu.svg" alt="flag of Ungary"> Hungary <abbr
-            title="Hungary"></abbr>(HUN)</th>
+        <th><span class="flag-icon flag-icon-hu" width="16"></span> Hungary <abbr title="Hungary">HUN</abbr></th>
         <td>8</td>
         <td>4</td>
         <td>5</td>
@@ -115,8 +111,7 @@
       </tr>
       <tr>
         <th>10</th>
-        <th><img width="16" src="vendor/flag-icon-css-master/flags/1x1/au.svg" alt="flag of Australia"> Australia <abbr
-            title="Australia"></abbr>(AUS)</th>
+        <th><span class="flag-icon flag-icon-au" width="16"></span> Australia <abbr title="Australia">AUS</abbr></th>
         <td>7</td>
         <td>16</td>
         <td>12</td>
@@ -125,7 +120,7 @@
     </tbody>
     <tfoot>
       <tr>
-        <th scope="row" colspan="2">Totals (85 NOCs)</th>
+        <th scope="row" colspan="2">Totals 85 <abbr title="Number of Countries">NOCs</abbr></th>
         <td>302</td>
         <td>304</td>
         <td>356</td>
@@ -133,6 +128,14 @@
       </tr>
     </tfoot>
   </table>
+
+  <!-- Add jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+  <!-- Insert and apply the datatables plugin from a cdn -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.11/js/jquery.dataTables.min.js"></script>
+
+  <script src="./scripts/main.js"></script>
 </body>
 
 </html>
